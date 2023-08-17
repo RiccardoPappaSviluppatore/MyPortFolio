@@ -1,0 +1,623 @@
+/* Hides the horizontal overflow */
+
+body {
+  overflow-x: hidden;
+}
+/* Resize in Mobile View */
+
+@media (min-width: 0) and (max-width: 767px) {
+  p,
+  .body-text {
+    font-size: 10px !important;
+  }
+  .down-arrow {
+    font-size: 20px !important;
+  }
+}
+/* Resize in Tablet View */
+
+@media (min-width: 768px) and (max-width: 991px) {
+  p,
+  .body-text {
+    font-size: 15px !important;
+  }
+  .down-arrow {
+    font-size: 30px !important;
+  }
+}
+/* Line Separators CSS */
+
+.line-separator {
+  display: block;
+  width: 50%;
+  height: 1px;
+  text-align: center;
+  margin: 20px auto;
+  border-bottom: 3px solid rgb(255, 255, 255);
+  border-radius: 50%;
+}
+/* First Wrap Background */
+
+.first-wrap {
+  height: 100%;
+  width: auto;
+  background: #ffffff url("/parentesi-graffe\ bg.jpg") no-repeat fixed;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+/* Second Wrap Background */
+
+.second-wrap {
+  height: 100%;
+  width: auto;
+  background: #ffffff url("/square\ bg.jpg") no-repeat fixed;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+/* Third Wrap Background */
+
+.third-wrap {
+  height: 100%;
+  width: auto;
+  background: #ffffff url("/parentesi-graffe\ bg\ flip.jpg") no-repeat fixed;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.first-div {
+  position: relative;
+  height: 300px;
+  width: auto;
+  background-color: transparent;
+  .first-inner-div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    .down-arrow {
+      font-size: 40px;
+      color: #fff;
+    }
+    p {
+      padding: 20px;
+      letter-spacing: 0.45em;
+      text-transform: uppercase;
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+  }
+}
+
+.second-div {
+  display: table;
+  height: 50px;
+  width: 100vw;
+  background-color: rgba(255, 255, 255, 0.3);
+  p {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 20px;
+    letter-spacing: 0.45em;
+    text-transform: uppercase;
+  }
+}
+
+.third-div {
+  display: table;
+  height: 200px;
+  width: 100%;
+  background-color: transparent;
+}
+
+.fourth-div {
+  display: table;
+  height: 50vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.3);
+  p {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 0.45em;
+    text-transform: uppercase;
+  }
+}
+
+.fifth-div {
+  display: table;
+  height: 200px;
+  width: auto;
+  background-color: transparent;
+}
+
+/* ********************* Image Waves ************************ */
+:root {
+  --wav1: url("https://i.postimg.cc/43KhFcRw/wave.png");
+}
+body.dark {
+  --wav1: url("https://i.postimg.cc/FRBCX3YR/wave2.png");
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+.waves {
+  position: relative;
+  background: #3586ff00;
+  height: 100vh;
+  width: 100%;
+}
+.waves .wave {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: var(--wav1);
+  background-size: 1000px 100px;
+}
+.waves .wave.wave1 {
+  animation: animate 5s linear infinite;
+  opacity: 0.7;
+  animation-delay: 1s;
+}
+.waves .wave.wave2 {
+  animation: animate 2s linear infinite;
+  opacity: 0.6;
+  animation-delay: 5s;
+}
+.waves .wave.wave3 {
+  animation: animate 2s linear infinite;
+  opacity: 1;
+  animation-delay: 0s;
+}
+@keyframes animate {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 1000px;
+  }
+}
+
+/* FOOTER */
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0);
+  color: #777;
+  text-align: center;
+}
+
+/* SOCIAL */
+.fa {
+  color: #000;
+  padding: 10px;
+  margin-bottom: 15px;
+  font-size: 15px;
+  width: 15px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-linkedin .fa-github .fa-envelope .fa-bounce {
+  --fa-animation-delay: 0.2s;
+  --fa-animation-duration: 1.5s;
+}
+
+.section {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.section span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+
+/* flip TEXT  */
+.waviy {
+  position: relative;
+}
+
+.waviy span {
+  position: relative;
+  display: inline-block;
+  font-size: 40px;
+  color: #fff;
+  text-transform: uppercase;
+  animation: flip 2s infinite;
+  animation-delay: calc(0.2s * var(--i));
+}
+
+@keyframes flip {
+  0%,
+  80% {
+    transform: rotateY(360deg);
+  }
+}
+
+/* Neon TEXT  */
+
+.neonText {
+  display: flex;
+  justify-content: center;
+  font-size: larger;
+  animation: flicker 1.5s infinite alternate;
+  color: #fff;
+}
+
+/* Flickering animation */
+@keyframes flicker {
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
+    text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #0fa,
+      0 0 80px #0fa, 0 0 90px #0fa, 0 0 100px #0fa, 0 0 150px #0fa;
+  }
+
+  20%,
+  24%,
+  55% {
+    text-shadow: none;
+  }
+}
+
+/* items */
+
+.card div {
+  color: rgba(255, 255, 255, 0.774);
+  font-size: 20px;
+  padding: 20px;
+}
+
+/* card */
+
+.card {
+  width: auto;
+  height: 300px;
+  border-radius: 18px;
+  box-shadow: 0 2px 30px rgba(rgb(0, 0, 0), 0.2);
+  background: lighten(#f0f4c300, 10%);
+  position: relative;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+}
+
+.cardWave {
+  opacity: 0.4;
+  position: absolute;
+  top: 3%;
+  left: 50%;
+  background: #ffffff;
+  width: 500px;
+  height: 400px;
+  margin-left: -250px;
+  margin-top: -250px;
+  transform-origin: 50% 48%;
+  border-radius: 43%;
+  animation: drift 3000ms infinite linear;
+}
+
+.cardWave.-three {
+  animation: drift 5000ms infinite linear;
+}
+
+.cardWave.-two {
+  animation: drift 7000ms infinite linear;
+  opacity: 0.1;
+  background: rgb(0, 195, 255);
+}
+
+.card:after {
+  content: "";
+  display: flex;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(rgb(38, 1, 118), 1),
+    rgba(#def, 0) 80%,
+    rgba(white, 0.5)
+  );
+  z-index: 11;
+  transform: translate3d(0, 0, 0);
+}
+
+.title {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  line-height: 300px;
+  text-align: center;
+  transform: translate3d(0, 0, 0);
+  color: white;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.4em;
+  font-size: 1.25rem;
+  text-shadow: 0 1px 0 rgba(black, 0.1);
+  text-indent: 0.3em;
+}
+@keyframes drift {
+  from {
+    transform: rotate(0deg);
+  }
+  from {
+    transform: rotate(360deg);
+  }
+}
+
+/**********************************/
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.btn {
+  color: #ffffff;
+  padding: 10px;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  font-weight: 400;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  border: 1px solid rgb(255, 255, 255);
+  background: transparent;
+}
+
+.btn:hover {
+  background-color: rgba(233, 233, 233, 0.836);
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cards_item {
+  display: flex;
+  padding: 1rem;
+}
+
+@media (min-width: 40rem) {
+  .cards_item {
+    width: 50%;
+  }
+}
+
+@media (min-width: 56rem) {
+  .cards_item {
+    width: 33.3333%;
+  }
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.card_content {
+  padding: 1rem;
+  background: linear-gradient(to bottom left, #ffffff00 40%, #99999900 100%);
+  z-index: 1;
+}
+
+.card_title {
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  margin: 0px;
+  text-align: center;
+}
+
+.card_text {
+  color: #ffffff;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+  font-weight: 400;
+}
+
+/* barra stack tech*/
+.stack {
+  border-radius: 10px;
+  padding-top: 10px;
+  width: auto;
+  height: 30px;
+  background-color: rgba(0, 0, 0, 0.404);
+  display: flex;
+  justify-content: space-around;
+}
+
+/* currency live */
+
+img {
+  max-width: 40px;
+}
+
+.currency {
+  max-width: 100%;
+  display: flex;
+  margin: 0 auto;
+  padding: 20px;
+  overflow-x: auto;
+}
+
+table {
+  background: rgba(255, 255, 255, 0.24);
+  color: #000;
+  text-align: right;
+  margin: 0 auto;
+  border-collapse: collapse;
+  box-sizing: border-box;
+  table-layout: fixed;
+}
+
+
+tr {
+  border-bottom: 1px solid #ccc;
+}
+
+th {
+  background: #ffffff;
+  line-height: 25px;
+}
+
+th,
+td {
+  margin: 0;
+  padding: 10px 20px;
+}
+
+th:nth-of-type(2),
+td:nth-of-type(2) {
+  text-align: left;
+}
+
+.positive {
+  color: #6abe2a;
+  font-weight: 600;
+}
+
+.negative {
+  color: #ff0000;
+  font-weight: 600;
+}
+/* ***** */
+.logo {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  border-radius: 50px;
+}
+
+.bio{
+  text-align: center;
+  color: #fff;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+}
+
+/* Carousel */
+.about-us-service-title {
+  text-align: center;
+}
+
+.carousel-container {
+
+  display: flex;
+  text-align: center;
+  position: relative;
+  height: 300px;
+  max-width: 800px;
+  min-width: 600px;
+  margin-top: 20px;
+  margin: 50px auto;
+}
+
+.carousel-card {
+  height: 200px;
+  width: 200px;
+  padding: 20px;
+  transition: 1s;
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  background-color: #000000;
+  color: #FFF;
+  cursor: pointer;
+  box-shadow: 1px 2px 3px grey;
+}
+
+.carousel-icon {
+  border-radius: 50px;
+  height: 50px;
+  width: 50px;
+  z-index: 1;
+}
+
+#far-left {
+  left: 15%;
+  transform: scale(.9) translateY(0%) translateX(-50%);
+  z-index: 5;
+  background-color: #f0f0f00a;
+}
+
+#left {
+  left: 30%;
+  transform: scale(1) translateY(0%) translateX(-50%);
+  z-index: 10;
+  background-color: #c3c3c3bd;
+}
+
+#center {
+  left: 50%;
+  transform: scale(1.05) translateY(0%) translateX(-50%);
+  z-index: 15;
+}
+
+#right {
+  left: 70%;
+  transform: scale(1) translateY(0%) translateX(-50%);
+  z-index: 10;
+  background-color: #c3c3c3bd;
+}
+
+#far-right {
+  left: 80%;
+  transform: scale(.9) translateY(0%) translateX(-50%);
+  z-index: 5;
+  background-color: #f0f0f00a;
+}
+
+
+.carousel-card:hover {
+
+}
