@@ -41,7 +41,7 @@ body {
 .first-wrap {
   height: 100%;
   width: auto;
-  background: #ffffff url("/parentesi-graffe\ bg.jpg") no-repeat fixed;
+  background: #ffffff url("/img/parentesi-graffe\ bg.jpg") no-repeat fixed;
   background-size: cover;
   background-position: 50% 50%;
 }
@@ -50,7 +50,7 @@ body {
 .second-wrap {
   height: 100%;
   width: auto;
-  background: #ffffff url("/square\ bg.jpg") no-repeat fixed;
+  background: #ffffff url("/img/square\ bg.jpg") no-repeat fixed;
   background-size: cover;
   background-position: 50% 50%;
 }
@@ -59,7 +59,7 @@ body {
 .third-wrap {
   height: 100%;
   width: auto;
-  background: #ffffff url("/parentesi-graffe\ bg\ flip.jpg") no-repeat fixed;
+  background: #ffffff url("/img/parentesi-graffe\ bg\ flip.jpg") no-repeat fixed;
   background-size: cover;
   background-position: 50% 50%;
 }
